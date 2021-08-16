@@ -10,14 +10,14 @@ public class HomePageSteps {
     PageManager pageManager = PageManager.getPageManager();
 
 
-    @И("Закрыть cookies")
+    @И("^Закрыть cookies$")
     public void closeCookie() {
         pageManager.getHomePage().closeCookie();
     }
 
-    @И("Нажать на Ипотека в главном меню, выбрать Ипотека на вторичное жильё")
-    public void goToMortgageSecondaryHousing() {
-        pageManager.getHomePage().goToMortgageSecondaryHousing();
+    @И("^Нажать на \"(.+)\" в главном меню, выбрать \"(.+)\"$")
+    public void goToMortgageSecondaryHousing(String baseMenu, String subMenu) {
+        pageManager.getHomePage().goToMortgageSecondaryHousing(baseMenu, subMenu);
     }
 
 }

@@ -148,11 +148,12 @@ public class MortgageSecondaryHousingPage extends BasePage {
 
     private void selectRadioBtn(WebElement element, String value) {
 
-
+        scrollToElementJs(element.findElement(By.xpath("./../../../../../../..")));
         if (!element.getAttribute("aria-checked").contains(value)) {
             element.click();
         }
 
+        wait.until(ExpectedConditions.attributeContains(element, "aria-checked", value));
         try {
             Thread.sleep(500);
         } catch (InterruptedException e) {

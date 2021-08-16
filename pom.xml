@@ -54,6 +54,14 @@
             <version>${junit-platform-launcher.version}</version>
         </dependency>
 
+        <!-- https://mvnrepository.com/artifact/org.junit.vintage/junit-vintage-engine -->
+        <dependency>
+            <groupId>org.junit.vintage</groupId>
+            <artifactId>junit-vintage-engine</artifactId>
+            <version>5.7.0</version>
+        </dependency>
+
+
         <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-java -->
         <dependency>
             <groupId>io.cucumber</groupId>
@@ -99,7 +107,7 @@
                 <configuration>
                     <testFailureIgnore>true</testFailureIgnore>
                     <includes>
-                        <include>**/*Test.java</include>
+                        <includes>**/*CucumberRunner.java</includes>
                     </includes>
                     <argLine>
                         -Xmx1024m
