@@ -148,7 +148,7 @@ public class DriverManager {
 
                 try {
                     RemoteWebDriver driver = new RemoteWebDriver(
-                            URI.create("http://:4445/wd/hub").toURL(),
+                            URI.create("http://selenoid.appline.ru:4445/wd/hub/").toURL(),
                             capabilities
                     );
                 } catch (MalformedURLException e) {
