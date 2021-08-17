@@ -147,7 +147,7 @@ public class DriverManager {
                 capabilities.setCapability("enableVideo", false);
 
                 try {
-                    RemoteWebDriver driver = new RemoteWebDriver(
+                    driver = new RemoteWebDriver(
                             URI.create("http://selenoid.appline.ru:4445/wd/hub/").toURL(),
                             capabilities
                     );
