@@ -133,10 +133,8 @@ public class MortgageSecondaryHousingPage extends BasePage {
 
     private void fillInputField(WebElement element, String value) {
 
-        element.click();
-        element.sendKeys(value);
-        element.sendKeys(Keys.CONTROL + "A", Keys.DELETE);
-        element.sendKeys(value);
+        waitUtilElementToBeClickable(element).click();
+        element.sendKeys(Keys.chord(Keys.CONTROL, "a"), value);
 
         try {
             Thread.sleep(500);
