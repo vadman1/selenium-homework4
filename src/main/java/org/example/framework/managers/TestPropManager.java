@@ -11,7 +11,7 @@ import java.util.Properties;
 public class TestPropManager {
 
     /**
-     * Переменна для хранения данных считанных из файла properties и переданных пользователем
+     * Переменная для хранения данных, считанных из файла properties и переданных пользователем
      * Т.е. переменная для хранения пользовательских properties
      *
      * @see Properties - реализован на основе {@link java.util.Hashtable}
@@ -20,7 +20,7 @@ public class TestPropManager {
 
 
     /**
-     * Переменна для хранения объекта TestPropManager
+     * Переменная для хранения объекта TestPropManager
      */
     private static TestPropManager INSTANCE = null;
 
@@ -51,7 +51,7 @@ public class TestPropManager {
 
 
     /**
-     * Метод подгружает содержимого файла application.properties в переменную {@link #properties}
+     * Метод подгружает содержимое файла application.properties в переменную {@link #properties}
      * Либо из файла переданного пользователем через настройку -DpropFile={nameFile}
      *
      * @see TestPropManager#TestPropManager()
@@ -68,7 +68,7 @@ public class TestPropManager {
 
 
     /**
-     * Метод заменяет значение содержащиеся в ключах переменной {@link #properties}
+     * Метод заменяет значение, содержащееся в ключах переменной {@link #properties}
      * Заменяет на те значения, что передал пользователь через maven '-D{name.key}={value.key}'
      * Замена будет происходить только в том случае если пользователь передаст совпадающий key из application.properties
      *
@@ -87,10 +87,10 @@ public class TestPropManager {
 
     /**
      * Метод возвращает либо значение записанное в ключе в переменной {@link #properties},
-     * либо defaultValue при отсутствие ключа в переменной {@link #properties}
+     * либо defaultValue при отсутствии ключа в переменной {@link #properties}
      *
      * @param key          - ключ, значения которого хотите получить
-     * @param defaultValue - значение по умолчанию которое хотите получить если отсутствует ключ в {@link #properties}
+     * @param defaultValue - значение по умолчанию, которое хотите получить если отсутствует ключ в {@link #properties}
      * @return String - возвращает системное св-во либо переданное default значение
      */
     public String getProperty(String key, String defaultValue) {
@@ -99,7 +99,7 @@ public class TestPropManager {
 
 
     /**
-     * Метод возвращает значения записанное в ключе в переменной {@link #properties}, если нет переменной вернет null
+     * Метод возвращает значения записанное в ключе в переменной {@link #properties}, если нет переменной - вернет null
      *
      * @param key - ключ, значения которого хотите получить
      * @return String - строка со значением ключа

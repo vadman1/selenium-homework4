@@ -28,7 +28,7 @@ public class DriverManager {
 
 
     /**
-     * Переменна для хранения объекта DriverManager
+     * Переменная для хранения объекта DriverManager
      */
     private static DriverManager INSTANCE = null;
 
@@ -88,7 +88,7 @@ public class DriverManager {
 
 
     /**
-     * Метод инициализирующий веб драйвер
+     * Метод инициализирующий веб-драйвер
      */
     private void initDriver() {
         if (OS.isFamilyWindows()) {
@@ -101,7 +101,7 @@ public class DriverManager {
     }
 
     /**
-     * Метод инициализирующий веб драйвер под ОС семейства Windows
+     * Метод инициализирующий веб-драйвер под ОС семейства Windows
      */
     private void initDriverWindowsOsFamily() {
         initDriverAnyOsFamily(PATH_GECKO_DRIVER_WINDOWS, PATH_CHROME_DRIVER_WINDOWS);
@@ -109,14 +109,14 @@ public class DriverManager {
 
 
     /**
-     * Метод инициализирующий веб драйвер под ОС семейства Mac
+     * Метод инициализирующий веб-драйвер под ОС семейства Mac
      */
     private void initDriverMacOsFamily() {
         initDriverAnyOsFamily(PATH_GECKO_DRIVER_MAC, PATH_CHROME_DRIVER_MAC);
     }
 
     /**
-     * Метод инициализирующий веб драйвер под ОС семейства Unix
+     * Метод инициализирующий веб-драйвер под ОС семейства Unix
      */
     private void initDriverUnixOsFamily() {
         initDriverAnyOsFamily(PATH_GECKO_DRIVER_UNIX, PATH_CHROME_DRIVER_UNIX);
@@ -124,7 +124,7 @@ public class DriverManager {
 
 
     /**
-     * Метод инициализирующий веб драйвер под любую ОС
+     * Метод инициализирующий веб-драйвер под любую ОС
      *
      * @param gecko - переменная firefox из файла application.properties в классе {@link org.example.framework.utils.PropConst}
      * @param chrome - переменная chrome из файла application.properties в классе {@link org.example.framework.utils.PropConst}
@@ -160,6 +160,4 @@ public class DriverManager {
                 Assertions.fail("Типа браузера '" + props.getProperty(TYPE_BROWSER) + "' не существует во фреймворке");
         }
     }
-
-
 }

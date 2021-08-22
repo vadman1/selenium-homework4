@@ -1,8 +1,6 @@
 package org.example.framework.managers;
 
-
 import java.util.concurrent.TimeUnit;
-
 import static org.example.framework.utils.PropConst.*;
 
 /**
